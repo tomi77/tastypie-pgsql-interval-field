@@ -1,9 +1,9 @@
-import re
 from datetime import timedelta
 
+import re
+import six
 from tastypie.exceptions import ApiFieldError
 from tastypie.fields import ApiField
-
 
 INTERVAL_REGEX = re.compile('^((?P<days>\d+) days, )?(?P<hours>\d+):(?P<minutes>\d+):(?P<seconds>\d+)$')
 
@@ -18,7 +18,7 @@ class IntervalField(ApiField):
     help_text = 'Time interval'
 
     def _parse(self, value):
-        if isinstance(value, basestring):
+        if isinstance(value, six.string_types):
             match = INTERVAL_REGEX.search(value)
 
             if match:
@@ -31,7 +31,7 @@ class IntervalField(ApiField):
         if value is None:
             return None
 
-        if isinstance(value, basestring):
+        if isinstance(value, six.string_types):
             match = INTERVAL_REGEX.search(value)
 
             if match:
