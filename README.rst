@@ -2,7 +2,7 @@
 django-tastypie-pgsql-interval-field
 ====================================
 
-``django-tastypie-pgsql-interval-field`` add a ``django-pgsql-interval-field`` support for a Django Tastypie.
+Add a ``django-pgsql-interval-field`` support for a Django Tastypie.
 
 .. image:: https://codeclimate.com/github/tomi77/tastypie-pgsql-interval-field/badges/gpa.svg
    :target: https://codeclimate.com/github/tomi77/tastypie-pgsql-interval-field
